@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caribbean Project 2025</title>
-    <style>
+    <title>Caribbean Project 2025</title> <style>
+        /* CSS umum untuk tampilan */
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f2f5; /* Light gray background */
@@ -35,7 +35,7 @@
         }
 
         h2 {
-            font-size: 2em; /* For SEGMENT 1 or USER X */
+            font-size: 2em; /* For ALI TEST PROGRAM or USER X */
             color: #555;
             margin-top: 5px;
             margin-bottom: 20px;
@@ -132,8 +132,7 @@
 <body>
 
     <div class="header-section">
-        <h1>Justify Project 2025</h1>
-        <h2 id="segment-title"></h2> <p class="datetime-info" id="datetime"></p>
+        <h1>Caribbean Project 2025</h1> <h2 id="segment-title"></h2> <p class="datetime-info" id="datetime"></p>
     </div>
 
     <div class="button-container" id="user-buttons-container">
@@ -155,42 +154,42 @@
 
     <script>
         // Data untuk tombol angka per USER
-        // Anda bisa menambahkan data untuk User 2, User 3, dst. di sini
+        // Ganti URL 'https://daisy.acorn.co.id/...' dengan link yang sebenarnya Anda inginkan!
         const userButtonData = {
             'User 1': [
                 { text: '1', link: 'https://www.google.com/imgres?q=uchiha&imgurl=https%3A%2F%2Fstatic.wikia.nocookie.net%2Fnaruto%2Fimages%2Fc%2Fc3%2FUchiha_Symbol.svg%2Frevision%2Flatest%3Fcb%3D20141102055502%26path-prefix%3Did&imgrefurl=https%3A%2F%2Fnaruto.fandom.com%2Fid%2Fwiki%2FKlan_Uchiha&docid=AWXDwn7w08dukM&tbnid=_Z1ptXWt8WgR7M&vet=12ahUKEwiYhdm2uvqNAxVEyjgGHb1qAvAQM3oECBcQAA..i&w=150&h=200&hcb=2&ved=2ahUKEwiYhdm2uvqNAxVEyjgGHb1qAvAQM3oECBcQAA' },
                 { text: '2', link: 'https://www.google.com/imgres?q=galbiru&imgurl=https%3A%2F%2Flookaside.instagram.com%2Fseo%2Fgoogle_widget%2Fcrawler%2F%3Fmedia_id%3D2879041184514102950&imgrefurl=https%3A%2F%2Fwww.instagram.com%2Fgalbiru%2F&docid=hMgHpxYplMgAjM&tbnid=5jgeevCKOmszoM&vet=12ahUKEwj--pjguvqNAxV3yzgGHYafKgQQM3oECGkQAA..i&w=1440&h=1330&hcb=2&itg=1&ved=2ahUKEwj--pjguvqNAxV3yzgGHYafKgQQM3oECGkQAA' },
-                { text: '3', link: 'https://www.google.com/search?q=link3_user1' },
-                { text: '4', link: 'https://www.google.com/search?q=link4_user1' },
-                { text: '5', link: 'https://www.google.com/search?q=link5_user1' }
+                { text: '3', link: 'https://daisy.acorn.co.id/user1/link3' },
+                { text: '4', link: 'https://daisy.acorn.co.id/user1/link4' },
+                { text: '5', link: 'https://daisy.acorn.co.id/user1/link5' }
             ],
             'User 2': [
-                { text: '1', link: 'https://www.google.com/search?q=link1_user2' },
-                { text: '2', link: 'https://www.google.com/search?q=link2_user2' },
-                { text: '3', link: 'https://www.google.com/search?q=link3_user2' },
-                { text: '4', link: 'https://www.google.com/search?q=link4_user2' },
-                { text: '5', link: 'https://www.google.com/search?q=link5_user2' },
-                { text: '6', link: 'https://www.google.com/search?q=link6_user2' },
-                { text: '7', link: 'https://www.google.com/search?q=link7_user2' },
+                { text: '1', link: 'https://daisy.acorn.co.id/user2/link1' },
+                { text: '2', link: 'https://daisy.acorn.co.id/user2/link2' },
+                { text: '3', link: 'https://daisy.acorn.co.id/user2/link3' },
+                { text: '4', link: 'https://daisy.acorn.co.id/user2/link4' },
+                { text: '5', link: 'https://daisy.acorn.co.id/user2/link5' },
+                { text: '6', link: 'https://daisy.acorn.co.id/user2/link6' },
+                { text: '7', link: 'https://daisy.acorn.co.id/user2/link7' },
             ],
             // Contoh untuk user lain yang punya lebih banyak tombol (seperti gambar awal)
             'Default': [ // Ini akan digunakan jika user lain belum diatur secara spesifik
-                { text: '1', link: 'https://www.google.com/search?q=link_default1' },
-                { text: '2', link: 'https://www.google.com/search?q=link_default2' },
-                { text: '3', link: 'https://www.google.com/search?q=link_default3' },
-                { text: '4', link: 'https://www.google.com/search?q=link_default4' },
-                { text: '5', link: 'https://www.google.com/search?q=link_default5' },
-                { text: '6', link: 'https://www.google.com/search?q=link_default6' },
-                { text: '7', link: 'https://www.google.com/search?q=link_default7' },
-                { text: '8', link: 'https://www.google.com/search?q=link_default8' },
-                { text: '9', link: 'https://www.google.com/search?q=link_default9' },
-                { text: '10', link: 'https://www.google.com/search?q=link_default10' },
-                { text: '11', link: 'https://www.google.com/search?q=link_default11' },
-                { text: '12', link: 'https://www.google.com/search?q=link_default12' },
-                { text: '13', link: 'https://www.google.com/search?q=link_default13' },
-                { text: '14', link: 'https://www.google.com/search?q=link_default14' },
-                { text: '15', link: 'https://www.google.com/search?q=link_default15' },
-                { text: '16', link: 'https://www.google.com/search?q=link_default16' }
+                { text: '1', link: 'https://daisy.acorn.co.id/default/link1' },
+                { text: '2', link: 'https://daisy.acorn.co.id/default/link2' },
+                { text: '3', link: 'https://daisy.acorn.co.id/default/link3' },
+                { text: '4', link: 'https://daisy.acorn.co.id/default/link4' },
+                { text: '5', link: 'https://daisy.acorn.co.id/default/link5' },
+                { text: '6', link: 'https://daisy.acorn.co.id/default/link6' },
+                { text: '7', link: 'https://daisy.acorn.co.id/default/link7' },
+                { text: '8', link: 'https://daisy.acorn.co.id/default/link8' },
+                { text: '9', link: 'https://daisy.acorn.co.id/default/link9' },
+                { text: '10', link: 'https://daisy.acorn.co.id/default/link10' },
+                { text: '11', link: 'https://daisy.acorn.co.id/default/link11' },
+                { text: '12', link: 'https://daisy.acorn.co.id/default/link12' },
+                { text: '13', link: 'https://daisy.acorn.co.id/default/link13' },
+                { text: '14', link: 'https://daisy.acorn.co.id/default/link14' },
+                { text: '15', link: 'https://daisy.acorn.co.id/default/link15' },
+                { text: '16', link: 'https://daisy.acorn.co.id/default/link16' }
             ]
         };
 
@@ -200,7 +199,7 @@
             const optionsDate = { day: '2-digit', month: 'short', year: 'numeric' };
             const optionsTime = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
 
-            const tanggal = now.toLocaleDateString('id-ID', optionsDate).replace('.', ''); // Menghilangkan titik
+            const tanggal = now.toLocaleDateString('id-ID', optionsDate).replace('.', '');
             const jam = now.toLocaleTimeString('id-ID', optionsTime);
 
             let salam;
@@ -228,11 +227,10 @@
 
             const buttonsToShow = userButtonData[userLabel] || userButtonData['Default']; // Ambil data spesifik atau default
 
-            // Buat baris tombol (sesuai layout gambar)
+            // Buat baris tombol
             let currentRow = document.createElement('div');
             currentRow.className = 'number-button-row';
-            let buttonCountInRow = 0;
-
+            
             buttonsToShow.forEach((button, index) => {
                 const linkElement = document.createElement('a');
                 linkElement.href = button.link;
@@ -240,64 +238,47 @@
                 linkElement.className = 'number-button';
                 linkElement.textContent = button.text;
 
-                // Logika untuk membuat baris baru (sesuai tata letak gambar)
-                // Ini adalah contoh sederhana, Anda bisa menyesuaikan jumlah tombol per baris
-                // Untuk contoh ini, saya akan mencoba memisahkan seperti gambar asli.
-                if (userLabel === 'User 1') { // Untuk User 1, tampilkan 5 tombol dalam satu baris
+                // Logika sederhana untuk membuat baris baru berdasarkan indeks (bisa disesuaikan lebih lanjut)
+                if (userLabel === 'User 1') {
+                    // Semua 5 tombol User 1 dalam satu baris
                     currentRow.appendChild(linkElement);
-                } else if (userLabel === 'User 2') { // Contoh untuk User 2
-                    if (buttonCountInRow === 0 && index === 0) {
-                        currentRow.appendChild(linkElement);
-                        buttonCountInRow++;
-                    } else if (buttonCountInRow < 7) { // 7 tombol di baris pertama
-                        currentRow.appendChild(linkElement);
-                        buttonCountInRow++;
-                    } else { // Mulai baris baru
+                } else if (userLabel === 'User 2') {
+                    // Contoh untuk User 2 (7 tombol)
+                    if (index > 0 && index % 7 === 0) { // Atau sesuaikan jumlah per baris
                         numberButtonsSection.appendChild(currentRow);
                         currentRow = document.createElement('div');
                         currentRow.className = 'number-button-row';
-                        currentRow.appendChild(linkElement);
-                        buttonCountInRow = 1;
                     }
+                    currentRow.appendChild(linkElement);
                 } else { // Untuk Default (seperti gambar kedua yang banyak tombol)
-                    if (index === 0) { // Baris 1: 1-7 (7 tombol)
-                         if (buttonCountInRow < 7) {
-                            currentRow.appendChild(linkElement);
-                            buttonCountInRow++;
-                        }
-                    } else if (index === 7) { // Baris 2: 8-9 (2 tombol)
+                    // Logika untuk memisahkan tombol default ke beberapa baris
+                    if (index < 7) { // Baris 1: 1-7
+                        currentRow.appendChild(linkElement);
+                    } else if (index === 7) { // Baris 2: 8-9 (mulai baris baru)
                         numberButtonsSection.appendChild(currentRow);
                         currentRow = document.createElement('div');
                         currentRow.className = 'number-button-row';
                         currentRow.appendChild(linkElement);
-                        buttonCountInRow = 1;
-                    } else if (index > 7 && index < 9) { // Lanjutan baris 2
+                    } else if (index < 9) { // Lanjutan baris 2
                         currentRow.appendChild(linkElement);
-                        buttonCountInRow++;
-                    } else if (index === 9) { // Baris 3: 10-12 (3 tombol)
+                    } else if (index === 9) { // Baris 3: 10-12 (mulai baris baru)
                         numberButtonsSection.appendChild(currentRow);
                         currentRow = document.createElement('div');
                         currentRow.className = 'number-button-row';
                         currentRow.appendChild(linkElement);
-                        buttonCountInRow = 1;
-                    } else if (index > 9 && index < 12) { // Lanjutan baris 3
-                         currentRow.appendChild(linkElement);
-                         buttonCountInRow++;
-                    } else if (index === 12) { // Baris 4: 13-16 (4 tombol)
+                    } else if (index < 12) { // Lanjutan baris 3
+                        currentRow.appendChild(linkElement);
+                    } else if (index === 12) { // Baris 4: 13-16 (mulai baris baru)
                         numberButtonsSection.appendChild(currentRow);
                         currentRow = document.createElement('div');
                         currentRow.className = 'number-button-row';
                         currentRow.appendChild(linkElement);
-                        buttonCountInRow = 1;
-                    } else if (index > 12 && index < 16) { // Lanjutan baris 4
+                    } else { // Lanjutan baris 4
                         currentRow.appendChild(linkElement);
-                        buttonCountInRow++;
-                    } else {
-                        currentRow.appendChild(linkElement); // Default fallback
                     }
                 }
             });
-            numberButtonsSection.appendChild(currentRow); // Tambahkan baris terakhir
+            numberButtonsSection.appendChild(currentRow); // Pastikan baris terakhir ditambahkan
 
             numberButtonsSection.style.display = 'flex'; // Tampilkan bagian tombol angka
             document.getElementById('segment-title').textContent = userLabel.toUpperCase(); // Update judul
@@ -308,14 +289,16 @@
             document.getElementById('user-buttons-container').style.display = 'flex'; // Tampilkan tombol USER
             document.getElementById('number-buttons-section').style.display = 'none'; // Sembunyikan tombol angka
             document.getElementById('back-to-users-button').style.display = 'none'; // Sembunyikan tombol kembali
-            document.getElementById('segment-title').textContent = 'Program Tester'; // Kembalikan judul awal
+            document.getElementById('segment-title').textContent = 'ALI TEST PROGRAM'; // Kembalikan judul awal ke 'ALI TEST PROGRAM'
         }
 
         // Inisialisasi: panggil fungsi saat halaman dimuat
         document.addEventListener('DOMContentLoaded', () => {
-            document.getElementById('segment-title').textContent = 'Program Tester'; // Set judul awal
+            // Set judul awal ke "ALI TEST PROGRAM"
+            document.getElementById('segment-title').textContent = 'ALI TEST PROGRAM';
             updateDateTime();
-            setInterval(updateDateTime, 1000); // Perbarui setiap detik
+            // Perbarui setiap detik
+            setInterval(updateDateTime, 1000);
         });
     </script>
 
