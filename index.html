@@ -158,27 +158,39 @@
         function generateTwoGenericLinks(userPrefix) {
             const links = [];
             for (let i = 1; i <= 2; i++) { // Loop hanya 2 kali
-                links.push({ text: i.toString(), link: `https://daisy.acorn.co.id/${userPrefix}/link${i}` });
+                links.push({ text: i.toString(), link: `https://daisy.acorn.co.id/${userPrefix}/link${i}_placeholder` }); // Placeholder
             }
             return links;
         }
 
         // Data untuk tombol angka per USER
         // Setiap user akan memiliki 2 tombol angka (1-2) dengan linknya masing-masing.
-        // Anda HARUS mengganti URL contoh dengan link AKTUAL yang Anda inginkan.
         const userButtonData = {
             'User 1': [
-                { text: '1', link: 'https://www.google.com/imgres?q=uchiha&imgurl=https%3A%2F%2Fstatic.wikia.nocookie.net%2Fnaruto%2Fimages%2Fc%2Fc3%2FUchiha_Symbol.svg%2Frevision%2Flatest%3Fcb%3D20141102055502%26path-prefix%3Did&imgrefurl=https%3A%2F%2Fnaruto.fandom.com%2Fid%2Fwiki%2FKlan_Uchiha&docid=AWXDwn7w08dukM&tbnid=_Z1ptXWt8WgR7M&vet=12ahUKEwiYhdm2uvqNAxVEyjgGHb1qAvAQM3oECBcQAA..i&w=150&h=200&hcb=2&ved=2ahUKEwiYhdm2uvqNAxVEyjgGHb1qAvAQM3oECBcQAA' },
-                { text: '2', link: 'https://www.google.com/imgres?q=galbiru&imgurl=https%3A%2F%2Flookaside.instagram.com%2Fseo%2Fgoogle_widget%2Fcrawler%2F%3Fmedia_id%3D2879041184514102950&imgrefurl=https%3A%2F%2Fwww.instagram.com%2Fgalbiru%2F&docid=hMgHpxYplMgAjM&tbnid=5jgeevCKOmszoM&vet=12ahUKEwj--pjguvqNAxV3yzgGHYafKgQQM3oECGkQAA..i&w=1440&h=1330&hcb=2&itg=1&ved=2ahUKEwj--pjguvqNAxV3yzgGHYafKgQQM3oECGkQAA' }
+                { text: '1', link: 'https://survey.euro.confirmit.com/wix/p768300932706.aspx?__sid__=AUL0deHi9Aap3FfGdwsPO41vBH5AWu8FZS8HB3YtAvGis_YTUcg5QXhKk8RPJgzixscwfqZHxpXRpG0AlFOf9w2' },
+                { text: '2', link: 'https://survey.euro.confirmit.com/wix/p768300932706.aspx?__sid__=TZHRbIhQWaM-7XJZjZmFjNdGc5Linitfu12RUE50b4mlQR29gee-Nxz6yW6piA_6ImLx8QyMVUXQPywfUmzuXw2' }
             ],
-            'User 2': generateTwoGenericLinks('user2'),
-            'User 3': generateTwoGenericLinks('user3'),
-            'User 4': generateTwoGenericLinks('user4'),
-            'User 5': generateTwoGenericLinks('user5'),
-            'User 6': generateTwoGenericLinks('user6'),
-            // 'Default' akan digunakan jika tombol USER yang diklik tidak ada di daftar di atas (tidak akan terjadi jika hanya ada 6 tombol).
-            // Diberi 2 link untuk konsistensi jika suatu saat Anda menambah user lagi tanpa definisi spesifik.
-            'Default': generateTwoGenericLinks('default')
+            'User 2': [
+                { text: '1', link: 'https://survey.euro.confirmit.com/wix/p768300932706.aspx?__sid__=IT7IY23K2AKHQTOs9_FAJLVCQSePyfnuzCQj1VYH7yWqCgKFotz-P86Dh1HVAhcgxDfTEYB0q50WI_NheD4H4w2' },
+                { text: '2', link: 'https://survey.euro.confirmit.com/wix/p768300932706.aspx?__sid__=y_tsIU8_nbkuA1YEitmtv1BInYkzV-r3uoTmW8enGG9HCcFL5QVmLnlqLK93SIZyzARdxtivwZGfNETeRoLH3A2' }
+            ],
+            'User 3': [
+                { text: '1', link: 'https://survey.euro.confirmit.com/wix/p768300932706.aspx?__sid__=UDVWXqXi01oGUBQ0a_ZaeKgEDjsa_avx8i-PcJiCfhyeoJ9W5Ny5BuQIodZmQkZ_xdNqMlFXM_dyZ5I41TY2NA2' },
+                { text: '2', link: 'https://survey.euro.confirmit.com/wix/p768300932706.aspx?__sid__=WgxngFMLNU8rgrEjNQypTLPZlscalLVlxeWgPnpf_jJ9BARVkpM0bqVdM63m5rB5nIY6ui2xk49ETMylJmbB7A2' }
+            ],
+            'User 4': [
+                { text: '1', link: 'https://survey.euro.confirmit.com/wix/p768300932706.aspx?__sid__=RwOdqMaMiamFMGBeLKudMjn-BxPoKHwl_7I7nlQxQuMS_JcXjw3yIyqh6VNK_gKomhp8IzdbMrICqS62yHv_ww2' },
+                { text: '2', link: 'https://survey.euro.confirmit.com/wix/p768300932706.aspx?__sid__=xdEvt3oXMvqrRBGH9b1vqwISmPhnPwDiSMC2w3fxzFSzKCRKH0OI8x6oLc2mKgvp94EwXklxNTRf_1UgeXM8uw2' }
+            ],
+            'User 5': [
+                { text: '1', link: 'https://survey.euro.confirmit.com/wix/p768300932706.aspx?__sid__=Gg7IL4ewWpWVz541pPnOvSfT3_bXoLqslEemRm8HnVRgHkW1VDdHmKJWY3tbzFXyjqWwW5OGGwEjnHMtY-GkXA2' },
+                { text: '2', link: 'https://survey.euro.confirmit.com/wix/p768300932706.aspx?__sid__=KmeFzxUT6EZzYdYVDx2ka5l5geaScDiyHIBPIGlDI4EsEbB7ArvQmCLsJYoLoPi0R77OMg50-s8rmaG37dDbHA2' }
+            ],
+            'User 6': [
+                { text: '1', link: 'https://survey.euro.confirmit.com/wix/p768300932706.aspx?__sid__=xmxD84PcgTJtnVD2SBUsR_xZKj2nh4hKFSXYEU2XobANl1totSYzTQ0DsskCATfVGk8giNl8QMpxKbJ1Dh_wYA2' },
+                { text: '2', link: 'https://survey.euro.confirmit.com/wix/p768300932706.aspx?__sid__=2ME3Wyk5nNpp1KfLVtqb5jrG0sDomuQ1IyWajw3UhLSfNm1Fg1U7SFRpWheH4He3M9pbXR-10UlIpP1C0YUJxA2' }
+            ],
+            'Default': generateTwoGenericLinks('default') // Menggunakan fungsi generik untuk Default
         };
 
         // Fungsi untuk memperbarui tanggal dan waktu secara real-time
@@ -220,7 +232,7 @@
             let currentRow = document.createElement('div');
             currentRow.className = 'number-button-row';
             
-            buttonsToShow.forEach((button) => { // Tidak perlu index untuk tata letak 2 tombol
+            buttonsToShow.forEach((button) => { 
                 const linkElement = document.createElement('a'); // Buat elemen link
                 linkElement.href = button.link;
                 linkElement.target = '_blank'; // Buka link di tab baru
